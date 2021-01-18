@@ -114,6 +114,17 @@ a:focus:not(.logo):not(.project-link) {
   padding-bottom: 33px;
 }
 
+.current {
+  color: var(--accent-color);
+}
+
+a::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: red;
+}
+
 .nav-list .item + .item {
   margin-left: 50px;
 }
@@ -148,10 +159,6 @@ a:focus:not(.logo):not(.project-link) {
 
 .contacts-list .item + .item {
   margin-left: 50px;
-}
-
-.current {
-  color: var(--accent-color);
 }
 
 h1 {
