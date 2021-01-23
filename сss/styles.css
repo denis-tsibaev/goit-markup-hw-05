@@ -57,6 +57,9 @@ a {
   text-decoration: none;
   color: var(--main-dark-color);
   font-weight: 500;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover:not(.logo):not(.project-link),
@@ -156,6 +159,8 @@ a:focus:not(.logo):not(.project-link) {
 .contacts-list .item svg {
   margin-right: 10px;
   fill: var(--second-dark-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list .contacts-link:hover svg,
@@ -226,6 +231,46 @@ h2 {
   line-height: 1.875;
   align-items: center;
   letter-spacing: 0.06em;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 528px;
+  height: 581px;
+
+  background: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 /* Секция преимущества */
@@ -375,6 +420,9 @@ h2 {
   width: 20px;
   height: 20px;
   fill: var(--fill-logo);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-team-link:hover,
@@ -411,7 +459,11 @@ h2 {
   padding: 6px 22px;
   border-style: none;
   border-radius: 4px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-color);
@@ -479,6 +531,7 @@ h2 {
   width: 100%;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
+
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -488,7 +541,8 @@ h2 {
   overflow: hidden;
 }
 
-.project-link:hover .project-overlay {
+.project-link:hover .project-overlay,
+.project-link:focus .project-overlay {
   transform: translate(0, -100%);
 }
 
@@ -518,6 +572,8 @@ h2 {
 
 .customer-logo {
   fill: var(--fill-logo);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-logo-link:hover,
