@@ -116,13 +116,19 @@ a:focus:not(.logo):not(.project-link) {
 
 .current {
   color: var(--accent-color);
+  position: relative;
 }
 
-a::before {
+.current::after {
+  display: block;
   content: "";
-  width: 30px;
-  height: 3px;
-  background-color: red;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+
+  position: absolute;
+  bottom: 0;
 }
 
 .nav-list .item + .item {
@@ -238,7 +244,6 @@ h2 {
 }
 
 .feature-list h3 {
-  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -278,8 +283,31 @@ h2 {
   justify-content: space-between;
 }
 
-.business-list .item {
+/* .business-list .item {
   width: 370px;
+} */
+
+.business-list h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--white-color);
+}
+
+.business-thumb {
+  position: relative;
+}
+
+.overlay-business {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding: 27px;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Наша команда */
@@ -303,7 +331,7 @@ h2 {
 }
 
 .member-description {
-  padding: 30px 0;
+  padding: 30px;
 }
 
 .team-list h3 {
@@ -438,6 +466,30 @@ h2 {
   line-height: 1.875;
   color: var(--second-dark-color);
   margin: 0;
+}
+
+.project-list .project-overlay p {
+  font-size: 18px;
+  line-height: 1.556;
+  color: var(--white-color);
+}
+
+.project-overlay {
+  position: absolute;
+  width: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-link:hover .project-overlay {
+  transform: translate(0, -100%);
 }
 
 /* Постоянные клиенты */
