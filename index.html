@@ -62,13 +62,7 @@
 				для вашего бизнеса</h1>
 			<button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
 		</div>
-
-		<div class="backdrop is-hidden" data-modal>
-			<div class="modal"><button data-modal-close>Закрыть</button></div>
-		</div>
-
 	</section>
-
 	<!-- //Баннер-->
 
 	<!-- Список преимуществ-->
@@ -153,6 +147,7 @@
 			</ul>
 		</div>
 	</section>
+	<!-- //Чем мы занимаемся  -->
 
 	<!-- Команда -->
 	<section class="team">
@@ -312,7 +307,6 @@
 	</section>
 	<!-- //Команда -->
 
-
 	<!-- Постоянные клиенты -->
 	<section class="customers">
 		<div class="container">
@@ -418,20 +412,14 @@
 			</div>
 		</div>
 	</footer>
-	<script>
-		const refs = {
-			openModalBtn: document.querySelector('[data-modal-open]'),
-			closeModalBtn: document.querySelector('[data-modal-close]'),
-			modal: document.querySelector('[data-modal]'),
-		};
+	<!-- //футер  -->
 
-		refs.openModalBtn.addEventListener('click', toggleModal);
-		refs.closeModalBtn.addEventListener('click', toggleModal);
+	<!-- Модальное окно  -->
+	<div class="backdrop is-hidden" data-modal>
+		<div class="modal"><button data-modal-close>X</button></div>
+	</div>
+	<script src="./js/modal.js"></script>
 
-		function toggleModal() {
-			refs.modal.classList.toggle('is-hidden');
-		}
-	</script>
 </body>
 <!-- вы добрались до финиша )) -->
 
