@@ -57,10 +57,6 @@ a {
   text-decoration: none;
   color: var(--main-dark-color);
   font-weight: 500;
-
-  transition-property: color, background-color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover:not(.logo):not(.project-link),
@@ -116,6 +112,10 @@ a:focus:not(.logo):not(.project-link) {
 .nav-list .item a {
   padding-top: 33px;
   padding-bottom: 33px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -149,6 +149,10 @@ a:focus:not(.logo):not(.project-link) {
   padding-bottom: 33px;
 
   fill: var(--second-dark-color);
+
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -423,6 +427,10 @@ h2 {
   border-radius: 50%;
 
   fill: var(--fill-logo);
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-socialnet-list li + li {
@@ -594,6 +602,16 @@ h2 {
   align-items: center;
 
   fill: var(--fill-logo);
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-logo {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-logo-link:hover,
@@ -693,6 +711,10 @@ address {
   align-items: center;
 
   fill: var(--white-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socialnet-link:hover,
@@ -716,6 +738,10 @@ address {
 .footer-contacts-link {
   line-height: 1.714;
   color: var(--contacts-color-footer);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* the end */
