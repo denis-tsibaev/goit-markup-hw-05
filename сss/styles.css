@@ -58,7 +58,7 @@ a {
   color: var(--main-dark-color);
   font-weight: 500;
 
-  transition-property: color, background-color;
+  transition-property: color, background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -139,12 +139,16 @@ a:focus:not(.logo):not(.project-link) {
   margin-left: 50px;
 }
 
-.contacts-link {
+.contacts-list .contacts-link {
   display: flex;
   align-items: center;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--second-dark-color);
+  padding-top: 33px;
+  padding-bottom: 33px;
+
+  fill: var(--second-dark-color);
 }
 
 .contacts-list {
@@ -152,18 +156,8 @@ a:focus:not(.logo):not(.project-link) {
   align-items: center;
 }
 
-.contacts-list .contacts-link {
-  padding-top: 33px;
-  padding-bottom: 33px;
-}
-
 .contacts-list .item svg {
   margin-right: 10px;
-  fill: var(--second-dark-color);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list .contacts-link:hover svg,
@@ -428,9 +422,7 @@ h2 {
   height: 100%;
   border-radius: 50%;
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--fill-logo);
 }
 
 .member-socialnet-list li + li {
@@ -440,11 +432,6 @@ h2 {
 .team .socialnet-icon {
   width: 20px;
   height: 20px;
-  fill: var(--fill-logo);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-sn-link:hover,
@@ -498,7 +485,6 @@ h2 {
 }
 
 /* карточки  */
-
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -607,17 +593,7 @@ h2 {
   justify-content: center;
   align-items: center;
 
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.customer-logo {
   fill: var(--fill-logo);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-logo-link:hover,
@@ -715,6 +691,8 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  fill: var(--white-color);
 }
 
 .footer-socialnet-link:hover,
@@ -725,7 +703,6 @@ address {
 .footer-socialnet-list .socialnet-icon {
   width: 20px;
   height: 20px;
-  fill: var(--white-color);
 }
 
 .footer address {
