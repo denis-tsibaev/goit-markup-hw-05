@@ -386,10 +386,23 @@ h2 {
 .team-list .item {
   width: 270px;
   background: var(--white-color);
+  border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+
+  /* в макте нет перехода по тени
+  карточки сразу имеют тени
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
+
+/* .team-list .item:hover,
+.team-list .item:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+} */
 
 .member-description {
   padding: 30px;
@@ -560,20 +573,21 @@ h2 {
   color: var(--white-color);
 }
 
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
 .project-overlay {
   position: absolute;
   width: 100%;
+  height: 100%;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
 
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-thumb {
-  position: relative;
-  overflow: hidden;
 }
 
 .project-link:hover .project-overlay,
